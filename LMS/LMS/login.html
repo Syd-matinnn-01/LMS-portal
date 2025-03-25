@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS- Let's Login </title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="website icon" type="png"
+    href="Images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<style>
+    /* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+/* Centered login section */
+.login {
+    width: 100%;
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Login heading */
+.login h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input fields */
+.login input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+.login input:focus {
+    border-color: #007bff;
+}
+
+/* Login button */
+.login button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.login button:hover {
+    background: #0056b3;
+}
+
+/* Links */
+.links {
+    margin-top: 15px;
+}
+
+.links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .login {
+        width: 90%;
+    }
+}
+
+</style>
+</head>
+<body>
+
+    <!--navigation-->
+    <nav>
+        <img src="Images/logo.png" alt="" srcset="">
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-solid fa-xmark"></i>
+                <li  class="class"> <a  href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="class"><a href="courses.html">course</a></li>
+                <li class="class"><a href="contact.html">contact</a></li>
+                <li class="class"><a class="active" href="login.html">Login</a></li>
+            </ul>
+            <img id="menu-btn" src="Images/menuicone.png" alt="">
+        </div>
+    </nav>
+
+    <!--Home-->
+    
+    <section id="login-home">
+        <h2>Login to Learning Managament System//</h2>
+    </section>
+
+    <section class="login">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div class="links">
+            <a href="forgot.html" class="forgot-password">Forgot Password?</a>
+            <p>Don't have an account? <a href="signup.html" class="sign-up">Sign Up</a></p>
+        </div>
+    </section>
+    
+    <!--footer-->
+
+    <footer>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li>Online Courses</li>
+            <li> Live Webinar</li>
+            <li>Certification</li>
+            <li>Subscription Plans</li>
+        </div>
+        <div class="footer-col">
+            <h3>Quick links</h3>
+            <li>Jobs</li>
+            <li> Marketing Services</li>
+            <li>Top Products</li>
+            <li>Subscription Plans</li>
+        </div>
+        <div class="footer-col">
+            <h3>Features</h3>
+            <li>Online Courses</li>
+            <li> Live Webinar</li>
+            <li>Certification</li>
+            <li>Subscription Plans</li>
+        </div>
+        <div class="footer-col">
+            <h3>Resources</h3>
+            <li>Online Courses</li>
+            <li> Live Webinar</li>
+            <li>Certification</li>
+            <li>Subscription Plans</li>
+        </div>
+        <div class="footer-col">
+            <h3>Newslatter</h3>
+            <p>You can trust us. we only send promo offers,</p>
+            <div class="subscribe">
+                <input type="text" placeholder="Your Email address">
+                <a href="#" class="yellow">subscribe</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright 02025 All rights reserved ! This tamplate is made by Syd_matinn</p>
+            <div class="pro-links">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        $('#menu-btn').click(function(){
+          $('nav .navigation ul').addClass('active')
+        })
+        $('#menu-close').click(function(){
+          $('nav .navigation ul').removeClass('active')
+        })
+    </script>
+    
+    <script type="module" src="script.js"></script>
+
+    <script src="https://kit.fontawesome.com/ff780adcdb.js" crossorigin="anonymous"></script>
+
+    <script type="module" defer>
+        // Import Firebase modules
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    
+        // Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyB0H6M9cvamvoh1cvCg5s9LPmXkCruT_Qg",
+            authDomain: "lmsnet-4e529.firebaseapp.com",
+            projectId: "lmsnet-4e529",
+            storageBucket: "lmsnet-4e529.appspot.com",
+            messagingSenderId: "871808328319",
+            appId: "1:871808328319:web:0b41ef794193a42b53954a",
+            measurementId: "G-FC620PPJ9V"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+    
+        // Handle login form submission
+        document.getElementById('login-form').addEventListener('submit', function (e) {
+            e.preventDefault();  // Prevent default form submission
+    
+            // Get email and password values
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+    
+            // Firebase authentication for sign-in
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in successfully
+                    const user = userCredential.user;
+                    
+                    if (user.emailVerified) {
+                        alert("Login successful!");
+                        
+                        // Save user session (optional)
+                        sessionStorage.setItem("user", JSON.stringify(user));
+    
+                        // Redirect to the homepage
+                        window.location.href = 'index.html';
+                    } else {
+                        alert("Please verify your email before logging in.");
+                    }
+                })
+                .catch((error) => {
+                    // Handle errors
+                    console.error("Error:", error);
+                    alert("Login failed! " + error.message);
+                });
+        });
+    </script>
+    
+</body>
+</html>

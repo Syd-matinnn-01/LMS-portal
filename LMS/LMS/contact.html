@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS - Learning Management System </title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="website icon" type="png"
+    href="Images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <!--navigation-->
+    <nav>
+        <img src="Images/logo.png" alt="" srcset="">
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-solid fa-xmark"></i>
+                <li><a class="class" href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="class"><a href="courses.html">course</a></li>
+                <li><a  class="active" href="contact.html">contact</a></li>
+                <li class="class"><a href="login.html">Login</a></li>
+
+            </ul>
+            <img id="menu-btn" src="Images/menuicone.png" alt="">
+        </div>
+    </nav>
+
+    <!--Home-->
+    
+    <section id="contact-home">
+        <h2>Contact Us/</h2>
+        
+    </section>
+
+    <section class="contact">
+        <div class="getin">
+           <h2>Get in touch</h2>
+           <p>Looking for help? Fill the form and start a new adventure.</p>
+           <div class="getin-detail">
+            <h3>Headquaters</h3>
+            <div>
+                <i class="fa-solid fa-house get"></i>
+                <p>11/B,Bhavani,oop.Karelibaug water tank ,<br>vadodara-399022 Gujarat, India</p>
+            </div>
+            <h3>Phone</h3>
+            <div>
+                <i class="fa-solid fa-phone get"></i>
+                <p>+91 9773257879 <br>+91 9429070567</p>
+            </div>
+            <h3>Support</h3>
+            <div>
+                <i class="fa-solid fa-envelope get"></i>
+                <p>roshani@roshani.net <br>Hr@roshani.net <br>parag@roshani.net </p>
+            </div>
+            <h3>Follow Us</h3>
+            <div class="ctpro-links">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+           </div> 
+        </div>
+ 
+        <div class="form">
+            <h4>Let's Connect</h4>
+            <p>Integer at lorem eget diam facilisis lacinia ac id massa. </p>
+            <div class="form-row">
+                <input type="text" placeholder="Your Name">
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="form-col">
+                <input type="text" placeholder="Subject">
+            </div>
+            <div class="form-col">
+                <textarea name="" id="" cols="30" rows="8" placeholder="How can we help?" ></textarea>
+            </div>
+            <div class="form-col">
+                <button>Send Message</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.8771890481585!2d73.20449807434524!3d22.320483942165342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fcf41e1451b79%3A0x23d5f98f7c12b48d!2sRoshani%20Technologies%20pvt.ltd!5e0!3m2!1sen!2sin!4v1739941955026!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!--footer-->
+
+    <footer>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li>Online Courses</li>
+            <li> Live Webinar</li>
+            <li>Certification</li>
+            <li>Subscription Plans</li>
+
+        </div>
+        <div class="footer-col">
+            <h3>Quick links</h3>
+            <li>Jobs</li>
+            <li> Marketing Services</li>
+            <li>Top Products</li>
+            <li>Subscription Plans</li>
+
+        </div>
+        <div class="footer-col">
+            <h3>Features</h3>
+            <li>Online Courses</li>
+            <li> Live Webinar</li>
+            <li>Certification</li>
+            <li>Subscription Plans</li>
+
+        </div>
+        <div class="footer-col">
+            <h3>Resources</h3>
+            <li>Online Courses</li>
+            <li> Live Webinar</li>
+            <li>Certification</li>
+            <li>Subscription Plans</li>
+
+        </div>
+        <div class="footer-col">
+            <h3>Newslatter</h3>
+            <p>You can trust us. we only send promo offers,</p>
+            <div class="subscribe">
+                <input type="text" placeholder="Your Email address">
+                <a href="#" class="yellow">subscribe</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright 02025 All rights reserved ! This tamplate is made by Syd_matinn</p>
+            <div class="pro-links">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        $('#menu-btn').click(function(){
+          $('nav .navigation ul').addClass('active')
+        })
+        $('#menu-close').click(function(){
+          $('nav .navigation ul').removeClass('active')
+        })
+    </script>
+    
+
+    <script type="module" src="script.js"></script>
+
+    <script src="https://kit.fontawesome.com/ff780adcdb.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

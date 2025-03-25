@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            max-width: 400px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0070f3;
+        }
+        select, button {
+            display: block;
+            width: 100%;
+            margin: 15px 0;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background: #0070f3;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #005bb5;
+        }
+        #qr-container {
+            margin-top: 15px;
+            display: none;
+            text-align: center;
+        }
+        canvas {
+            margin-top: 10px;
+            border: 5px solid #ddd;
+            padding: 10px;
+            border-radius: 10px;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Proceed with Payment</h2>
+        <p>Amount: ₹1999</p>
+        
+        <label for="payment-method">Select Payment Method:</label>
+        <select id="payment-method">
+            <option value="paypal">PayPal</option>
+            <option value="upi">UPI</option>
+            <option value="googlepay">Google Pay</option>
+        </select>
+        
+        <button id="pay-button">Proceed to Payment</button>
+        
+        <div id="qr-container">
+            <p>Scan this QR Code to Pay:</p>
+            <canvas id="upi-qr"></canvas>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("pay-button").addEventListener("click", function() {
+            const paymentMethod = document.getElementById("payment-method").value;
+            const amount = "1999"; 
+            const payeeName = encodeURIComponent("Syd matinnn"); 
+            const upiId = "saiyedmatin123-1@okhdfcbank";  // Update with your new UPI ID 
+            const transactionNote = encodeURIComponent("Course Payment");
+            
+            const upiUrl = `upi://pay?pa=${upiId}&pn=${payeeName}&am=${amount}&cu=INR&tn=${transactionNote}`;
+
+            if (paymentMethod === "paypal") {
+                const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=YOUR_PAYPAL_EMAIL&amount=500&currency_code=INR`;
+                window.open(paypalUrl, "_blank");
+            } else if (paymentMethod === "upi" || paymentMethod === "googlepay") {
+                // Show QR Code
+                document.getElementById("qr-container").style.display = "block";
+
+                // Generate UPI QR Code
+                new QRious({
+                    element: document.getElementById("upi-qr"),
+                    value: upiUrl,
+                    size: 200
+                });
+
+                // Open UPI Payment Link (For Mobile Users)
+                window.location.href = upiUrl;
+            }
+        });
+    </script>
+    <script>
+        
+    </script>
+</body>
+</html>

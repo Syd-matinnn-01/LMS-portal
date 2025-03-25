@@ -1,0 +1,98 @@
+////
+
+
+css code profiles backgrond without box 
+
+        #experts {
+            padding: 8vw;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        
+        #experts h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        #experts p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        
+        #experts .experts-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            justify-items: center;
+            margin-top: 50px;
+        }
+        
+        .profile {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 320px;
+            transition: transform 0.3s ease;
+        }
+        
+        .profile:hover {
+            transform: translateY(-10px);
+        }
+        
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+        
+        .profile h6 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .profile p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .pro-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .pro-links i {
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .pro-links i:hover {
+            color: #007BFF;
+        }
+        
+        @media (max-width: 768px) {
+            #experts {
+                padding: 5vw;
+            }
+            
+            .profile img {
+                width: 100px;
+                height: 100px;
+            }
+        
+            #experts h1 {
+                font-size: 2rem;
+            }
+        }
+        

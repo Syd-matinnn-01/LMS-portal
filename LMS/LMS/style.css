@@ -1,0 +1,1485 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*golbal Tags*/
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(35, 35,85 );
+}
+
+
+span{
+    font-size: .9rem;
+    color: #757573;
+}
+
+h6{
+    font-size: .9rem;
+    color: rgb(24, 24, 49);  
+}
+
+/* Navigation*/
+
+nav{
+    position:fixed ;
+    width: 100%;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    padding:1vw 8vw ;
+    box-shadow: 3px 3px;
+    color: rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    
+}
+
+nav img{
+    width: 120px; ;
+   
+}
+
+nav .navigation{
+    display: flex;
+}
+
+#menu-btn{
+    display: none;
+    
+}
+
+#menu-close{
+    display: none;
+    width: 40px;
+    height: 40px;
+}
+
+nav .navigation ul{
+   display: flex; 
+   justify-content: flex-end;
+   align-items: center;
+}
+
+nav .navigation ul li{
+    list-style: none;
+    margin-left: 30px;
+}
+nav .navigation ul li a{
+    text-decoration: none;
+    color: rgb(21, 21, 100);
+    font-size: 16px ;
+    font-weight: 500;
+    transition: 0.3s ease;
+
+}
+nav .navigation ul li a.active,
+nav .navigation ul li a:hover{
+    color: yellowgreen;
+
+}
+
+/*Home*/
+
+#home {
+    background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url("Images/bg.png");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px ;
+ 
+}
+
+#home h2{
+    color: #ffff;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+#home p{
+    width: 50%;
+    color: #ffff;
+    font-size: 1.0rem;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+#home .btn{
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+#home a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    background-color: #ffff;
+    font-weight: 600;
+    border-radius: 5px;
+
+}
+
+#home a.blue{
+    color: #ffff;
+    background: rgb(21, 21, 100);
+
+}
+
+#home a.blue{
+    color: #ffff;
+    background: rgb(21, 21, 100);
+    transition:0.3s ease;
+
+}
+#home a.blue:hover{
+    color: rgb(21, 21, 100);
+    background:#ffff
+
+}
+
+#home a.yellow{
+    color: #ffff;
+    background: #fcd938;
+    transition:0.3s ease;
+
+}
+#home a.yellow:hover{
+    color:  rgb(21, 21, 100);                        
+    background:#ffff;
+
+}
+
+/*features*/
+
+/* General styling for the features section */
+#features {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+#features h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+#features p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Base styling for feature boxes container */
+.fea-base {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;  /* Ensures it wraps to new lines on smaller screens */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual feature box styling */
+.fea-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    width: 30%;  /* 3 items per row */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.fea-box:hover {
+    transform: scale(1.05);  /* Slightly enlarge the box on hover */
+}
+
+.fea-box i {
+    font-size: 40px;
+    color: #3498db;  /* Blue color for icons */
+    margin-bottom: 15px;
+}
+
+.fea-box h3 {
+    font-size: 22px;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.fea-box p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .fea-box {
+        width: 48%;  /* 2 items per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .fea-box {
+        width: 100%;  /* 1 item per row on mobile */
+    }
+}
+
+
+/* General styling for the courses section */
+#courses {
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 1200px; /* Limit the width for better alignment */
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Title and description styling */
+#courses h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#courses p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* The container that holds all the course boxes */
+.course-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Styling for each individual course box */
+.courses {
+    width: 23%; /* 4 items per row */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.courses:hover {
+    transform: scale(1.05); /* Slightly enlarge the course on hover */
+}
+
+/* Image styling */
+.courses img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Details inside the course box */
+.details {
+    margin-top: 15px;
+}
+
+.details span {
+    color: #777;
+    font-size: 14px;
+}
+
+.details h6 {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Stars rating */
+.star i {
+    color: #ff9900;
+}
+
+.star span {
+    margin-left: 5px;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Course price styling */
+.cost {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .courses {
+        width: 48%; /* 2 items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .courses {
+        width: 100%; /* 1 item per row */
+    }
+}
+
+#courses .courses .cost{
+    background-color: rgb(74, 74, 136);
+    color: #fff;
+    line-height: 70px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    bottom: 100px;
+}
+
+/* Styling for the "Buy Now" button */
+.buy-now {
+    background-color: #0056b3;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for "Buy Now" button */
+.buy-now:hover {
+    background-color: #0056b3;
+}
+
+
+/*registration*/
+
+#registration{
+    padding: 6vw 8vw 6vw 8vw;
+    background-image: linear-gradient(rgba(99,112,168,0.5),rgba(81,91,233,0.5)),url("Images/signup.png");
+    width: 100%;
+    height:100% ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#registration .reminder{
+    color: #ffff;
+}
+
+#registration .reminder h1{
+    color: #ffff;
+}
+
+#registration .reminder .time{
+    display: flex;
+    margin: 40px;
+
+}
+
+#registration .reminder .time .date{
+    text-align: center;
+    padding: 13px 33px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    border-radius: 10px;
+    margin: 0 5px 10px 5px;
+    border: 1 px solid rgba(255, 255, 255, 0.18);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#registration .form{
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+
+}
+
+#registration .form input{
+    margin: 15px 0;
+    padding: 15px 10px;
+    border: 1px solid rgb(84, 40, 241);
+    outline: none;
+}
+#registration .form input::placeholder{
+    color: #413c3c;
+    font-weight: 500;
+    font-size: 0.9rem;
+
+}
+#registration .form .btn{
+    margin-top: 20px ;
+}
+
+#registration .form a.yellow{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    background-color: #ffff;
+    font-weight: 600;
+    border-radius: 5px;
+    color: #ffff;
+    background: #fcd938;
+    transition:0.3s ease;
+
+}
+#registration .form a.yellow:hover{
+    color:  rgb(21, 21, 100);                        
+    background:#ffff;
+
+}
+
+/*experts*/
+
+#experts {
+    padding: 8vw;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#experts h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#experts p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+#experts .experts-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-top: 50px;
+}
+
+/* Removing background box */
+.profile {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 320px;
+    transition: transform 0.3s ease;
+}
+
+.profile:hover {
+    transform: translateY(-10px);
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.profile h6 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.profile p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.pro-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.pro-links i {
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.pro-links i:hover {
+    color: #007BFF;
+}
+
+@media (max-width: 768px) {
+    #experts {
+        padding: 5vw;
+    }
+    
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #experts h1 {
+        font-size: 2rem;
+    }
+}
+
+/*footer*/
+
+footer {
+    padding: 8vw;
+    background-color: #101c32;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+footer .footer-col{
+    padding-bottom: 40px;
+}
+footer h3{
+    color: rgb(241, 240,254);
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+
+footer li{
+    list-style: none;
+    color: #7b838a;
+    padding: 10px 0;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3sec ease;
+}
+
+footer li:hover {
+    color: rgb(241, 240,254);
+
+}
+
+footer p{
+    color: #7b838a;
+}
+
+footer .subscribe{
+    margin-top: 20px;
+
+}
+
+footer input{
+    width: 220px;
+    padding: 15px 12px;
+    background: #334F6C;
+    border: none;
+    color: #fff;
+}
+
+footer .subscribe a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    background-color: #ffff;
+    font-weight: 600;
+    
+
+}
+
+footer a.yellow{
+    color: #ffff;
+    background: #fcd938;
+    transition:0.3s ease;
+
+}
+footer a.yellow:hover{
+    color:  rgb(21, 21, 100);                        
+    background:#ffff;
+
+
+}
+
+footer .copyright{
+    margin-top: 20px;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+footer .copyright p{
+    color: #fff;
+}
+
+footer .copyright .pro-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer .copyright .pro-links i{
+    border-color: #5f7185;
+    color: #fff;
+     
+}
+
+footer .copyright .pro-links i {
+    font-size: 1.5rem;
+    padding: 10px 13px;
+    border: 1px solid rgb(21, 21, 100);
+    
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+footer .copyright .pro-links i:hover {
+    background-color: #fdc938;
+    color: #2c2c2c;
+}
+
+/*About*/
+
+#about-home {
+    background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url("Images/aboutbg.png.jpg");
+    width: 100%;
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#about-home h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8vw;
+    flex-wrap: wrap; /* Ensures the content adjusts on smaller screens */
+}
+
+#about-container .about-img {
+    width: 40%;
+    padding-right: 4%;
+}
+
+#about-container .about-text {
+    width: 55%; /* Increased width for better text alignment */
+}
+
+#about-container .about-text h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#about-container .about-text p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+#about-container .about-fe {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#about-container .about-fe img {
+    width: 40px;
+    margin-right: 1rem;
+    
+}
+#about-container .about-text .about-fe img{
+    width: 10%;
+    background-size: cover;
+    background-position: center;
+    margin-right: 20px;
+}
+
+#about-container .fe-text h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    align-items: center;
+}
+
+#about-container .fe-text p {
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+
+/*courses*/
+#courses-home {
+    background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url("Images/coursesbg.png.jpg");
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px ;
+ 
+}
+
+#courses-home h2{
+    color: #ffff;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+/*course-inner*/
+
+
+
+.course-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 8vw;
+}
+
+.course-inner .overview{
+    width: 70%;
+}
+
+.course-inner .overview .course-img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    border-radius:12px ;
+    margin-bottom: 20px;
+}
+.course-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 8vw;
+}
+
+.course-inner h3{
+    padding: 35px 0 25px 0;
+    color: #293038;
+    text-align: left;
+}
+
+.course-inner p{
+    color: #64626e;
+}
+
+.course-inner hr{
+    height: 1px;
+    background: rgba(236, 226, 229, 0.5);
+    margin-top: 40px;
+}
+
+.course-inner .overview{
+    width: 70%;
+}
+
+.course-inner .overview .course-img {
+    width:100%;
+    height: 60vh;
+    object-fit: cover;
+    border-radius:12px ;
+    margin-bottom: 20px;
+}
+
+.course-inner .overview .course-head{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.course-inner .overview .course-head .c-name{
+    width: 70%;
+}
+
+.course-inner .overview .course-head .c-name h2{
+    color: #293038;   
+}
+.course-inner .overview .course-head .c-name .star{
+    margin: 6px 0;
+}
+
+.course-inner .overview .course-head .c-name .star i{
+    color: #fdc938;
+    font-size: 0.9rem;
+}
+.course-inner .overview .course-head .c-name p{
+    font-size:15px;
+}
+
+.course-inner .overview .course-head span{
+    padding: 16px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #5838fc;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: rgba(88, 56, 252, 0.1);
+}
+
+.course-inner .learn p{
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+
+.course-inner .learn p i{
+    color: #654ce4;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.course-inner .tutor{
+    display: flex;
+}
+
+.course-inner .tutor img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.course-inner .tutor h5{
+    font-size: 15px;
+}
+
+.course-inner .enroll {
+    width: 300px;
+    padding: 0 40px 40px 40px;
+    border-radius: 11px;
+    box-shadow: 0px 20px 40px rgba(11, 2, 55, 0.1); /* Updated box-shadow */
+}
+
+.course-inner .enroll h3{
+    padding: 10px;
+}
+
+.course-inner .enroll p{
+    font-size: 15px;
+    color: #64626e;
+    margin: 15px 0;
+}
+
+.course-inner .enroll p i{
+    color: #654ce4;
+    font-weight: 700;
+    margin-right: 18px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+}
+
+.course-inner .enroll .enroll-btn{
+    padding: 25px 0 20px 0;
+    margin: auto;
+    text-align: center;
+}
+
+.course-inner .enroll .enroll-btn a{
+    text-decoration: none;
+    font-size: .8rem;
+    padding: 11px 45px ;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #fff;
+    background: rgb(50, 50, 136);
+}
+
+.course-inner .enroll .payment-method {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.course-inner .enroll .payment-method label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.course-inner .enroll .payment-method select {
+    padding: 8px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+
+
+/*contact*/
+
+.contact{
+    padding:5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact .getin{
+    width: 350px;
+}
+
+.contact .getin h2{
+    color: #2c234d;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: .8;
+    margin-bottom: 16px;
+}
+
+.contact .getin p{
+    color: #686875;
+    line-height: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom:1px solid #e5e4ed ;
+}
+
+.contact .getin h3{
+    color: #2c234d;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    margin-bottom: 15px;
+}
+
+.contact .getin .getin-detail div{
+    display: flex;
+}
+
+.contact .getin .getin-detail div .get{
+    font-style: 16px;
+    line-height: 22px;
+    color: #5838fc;
+    margin-right: 20px;
+}
+
+.contact .getin .getin-detail div p{
+    font-size: 14px;
+    border-bottom: none;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+.contact .getin .getin-detail .ctpro-links {
+    display: flex;
+    gap: 15px;
+}
+
+.ctpro-links i {
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.ctpro-links i:hover {
+    color: #007BFF;
+}
+
+.contact .form{
+    width: 60%;
+    background:#f2f6fa;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact .form h4{
+    font-size: 24px;
+    color: #2c234d;
+    line-height: 30px;
+    margin-bottom: 8px;
+}
+
+.contact .form p{
+    color: #686875;
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+
+.contact .form .form-row{
+    
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact .form .form-row input{
+    width: 40%;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 3px;
+    border: none;
+    background: #fff;
+    color: #7e7c87;
+    outline: none;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+}
+
+.contact .form .form-col input,
+.contact .form .form-col textarea{
+    width: 81%;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 3px;
+    border: none;
+    background: #fff;
+    color: #7e7c87;
+    outline: none;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+}
+
+.contact .form button{
+    font-size: .9rem;
+    padding: 13px 25px;
+    background: rgb(21, 21, 100);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+}
+
+.map{
+    width: 100%;
+    height: 70vh;
+    margin-bottom:8vw;
+}
+
+.map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#contact-home {
+    background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url("Images/contactbg.png.jpg");
+    width: 100%;
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#contact-home h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Background for Login Page */
+#login-home {
+    background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url("Images/loginbg.png.jpg");
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#login-home h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Main login box */
+.login {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Animating the login box */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title Style */
+h3 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* Form Styles */
+.login .login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login .login-form label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.login .login-form input {
+    width: 100%;
+    font-size: 16px;
+    padding: 14px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+/* Focused input effect */
+.login .login-form input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Button Style */
+.form-btn {
+    text-align: center;
+}
+
+button {
+    padding: 14px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Links section */
+.links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #388e3c;
+}
+
+.forgot-password {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.sign-up {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Sign-up text style */
+.links p {
+    font-size: 14px;
+    color: #555;
+}
+
+.links .sign-up:hover {
+    text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 500px) {
+    .login {
+        padding: 20px;
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .login .login-form input {
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #about-container {
+        flex-direction: column;
+        padding: 4vw;
+    }
+
+    #about-container .about-img, #about-container .about-text {
+        width: 100%; /* Full width on smaller screens */
+        padding-right: 0;
+    }
+
+    #about-container .about-fe {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 1rem;
+    }
+
+    #about-container .about-fe img {
+        margin-bottom: 1rem; /* Spacing between icon and text in smaller screens */
+    }
+}
+
+/*about trusted by*/
+
+#trust{
+    text-align: center;
+    padding: 6vw 6vw 6vw 6vw;
+}
+
+#trust .trust-img img{
+    width: 100px;
+    height: auto;
+}
+
+#trust .trust-img {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+@media (max-width: 769px){
+    nav{
+        padding: 15px 20px;
+    }
+    nav img {
+        width: 130px;
+    }
+    #menu-btn{
+        display: initial;
+    }
+    
+    #menu-close{
+        display: initial;
+        font-size: 1.6rem;
+        color: #fff;
+        padding: 30px 0 20px 20px ;
+    }
+    nav .navigation ul{
+        position: absolute;
+        top: 0;
+        right: -220px;
+        height: 100vh;
+        width: 220px; 
+        background:rgba(17, 20, 104, 0.45);
+        backdrop-filter: blur(4.5px);
+        border: 1px solid  rgba(255, 255, 255, 0.18);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: 0.3s ease;
+    }
+
+    nav .navigation ul.active{
+        right: 0;
+    }
+
+    nav .navigation ul li{
+        padding: 20px 0 20px 40px;
+        margin-left:0 ;
+    }
+
+    nav .navigation ul li a{
+        color: #fff;
+    }
+    #home {
+        padding: 0;
+    }
+    #home p{
+        width: 90%;
+        
+    }
+}
+
+
+
+@media (max-width:475px) {
+    #registration{
+        display: flex;
+        flex-direction:column ;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+    
+    }
+
+    footer .subscribe a{
+        text-decoration: none;
+        font-size: 0.8rem;
+        padding: 12px;
+        background-color: #ffff;
+        font-weight: 600;
+    }
+
+    /*about*/
+    #about-container{
+        display: flex;
+    }
+}
+.forgot-password-section {
+    text-align: center;
+    margin: 50px auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.forgot-password-section h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.forgot-password-section p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.forgot-password-section input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.forgot-password-section button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.forgot-password-section button:hover {
+    background: #0056b3;
+}
+
+.forgot-password-section .links {
+    margin-top: 10px;
+}
+
+.forgot-password-section .links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password-section .links a:hover {
+    text-decoration: underline;
+}

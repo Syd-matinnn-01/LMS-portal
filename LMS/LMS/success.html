@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <script type="module">
+        import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+        
+        const firebaseConfig = {
+  apiKey: "AIzaSyB0H6M9cvamvoh1cvCg5s9LPmXkCruT_Qg",
+  authDomain: "lmsnet-4e529.firebaseapp.com",
+  projectId: "lmsnet-4e529",
+  storageBucket: "lmsnet-4e529.firebasestorage.app",
+  messagingSenderId: "871808328319",
+  appId: "1:871808328319:web:ebf2cec71a275a7c53954a",
+  measurementId: "G-Y797M38BXT"
+};
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const courseId = urlParams.get("courseId");
+        const userEmail = urlParams.get("email");
+
+        if (courseId && userEmail) {
+            setDoc(doc(db, "purchases", userEmail + "-" + courseId), {
+                userEmail: userEmail,
+                courseId: courseId,
+                paymentStatus: "Paid",
+                createdAt: new Date()
+            }).then(() => {
+                document.getElementById("status").innerHTML = "✅ Payment Successful! You can now access your course.";
+                document.getElementById("access-course").href = `/courses/${courseId}`;
+            });
+        } else {
+            document.getElementById("status").innerHTML = "❌ Payment Verification Failed!";
+        }
+    </script>
+</head>
+<body>
+    <h2 id="status">Processing Payment...</h2>
+    <a id="access-course" href="#" style="display: none;">Go to Course</a>
+</body>
+</html>
